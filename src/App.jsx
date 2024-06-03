@@ -34,7 +34,12 @@ function App() {
   }
 
   const deleteTodo = (todoId) => {
-    const updatedTodos = todos.filter((todo) => todo.id !== todoId);
+    const updatedTodos = todos.filter((todo) => {
+      if (todo.id === todoId) {
+        todo.completed = !todo.completed
+      }
+      return todo
+    });
     setTodos(updatedTodos);
   }
 

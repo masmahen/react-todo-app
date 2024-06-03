@@ -20,9 +20,9 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
       />
       <p style={getTodoTitleStyle()}>{todo.title}</p>
       {/* Tambahkan sebuah button di sini */}
-      <button 
+      <button
         style={styles.button}
-        onChange={() => deleteTodo(todo.id)}>x</button>
+        onClick={() => deleteTodo(todo.id)}>x</button>
     </div>
   )
 }
