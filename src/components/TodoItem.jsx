@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Menerima function toggleCompleted sebagai sebuah prop
 const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
@@ -15,14 +14,11 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
       <input
         type="checkbox"
         style={styles.checkbox}
-        //  Memberikan id dari todo sebagai argument
         onChange={() => toggleCompleted(todo.id)}
       />
       <p style={getTodoTitleStyle()}>{todo.title}</p>
-      {/* Tambahkan sebuah button di sini */}
       <button
-        style={styles.button}
-        onClick={() => deleteTodo(todo.id)}>x</button>
+        style={styles.button}>x</button>
     </div>
   )
 }
