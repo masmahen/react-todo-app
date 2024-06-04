@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
+const TodoItem = ({ todo, toggleCompleted, deleteTodo}) => {
   const getTodoTitleStyle = () => {
     if (todo.completed === true) {
       return { textDecoration: 'line-through' }
@@ -18,7 +18,8 @@ const TodoItem = ({ todo, toggleCompleted, deleteTodo }) => {
       />
       <p style={getTodoTitleStyle()}>{todo.title}</p>
       <button
-        style={styles.button}>x</button>
+        style={styles.button}
+        onClick={() => deleteTodo(todo.id)}>x</button>
     </div>
   )
 }
